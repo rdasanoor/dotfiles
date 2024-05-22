@@ -1,0 +1,58 @@
+snippet mk "Math" wA
+\(${VISUAL}${1}\)`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+  snip.rv = ' '
+else:
+  snip.rv = ''
+`$2
+endsnippet
+
+snippet dm "Math" wA
+\[
+$1
+\] $0
+endsnippet
+
+snippet align* "Un-numbered align environment" bi
+\\begin{align*}
+    $1
+\\end{align*}$0
+endsnippet
+
+snippet gather* "Un-numbered gather environment" bi
+\\begin{gather*}
+    $1
+\\end{gather*}$0
+endsnippet
+
+snippet "(\\?\w+)(,\.|\.,)" "Bold" riA
+<b>`!p snip.rv=match.group(1)`</b>
+endsnippet
+
+snippet // "Fraction" iA
+\\$1frac{$2}{$3}$0
+endsnippet
+
+snippet correct "Po Stuff"
+class="correct"
+endsnippet
+
+snippet $ "LaTeX" i
+$$1$$0
+endsnippet
+
+snippet deg "Degree symbol" i
+^{\circ}
+endsnippet
+
+snippet tag "Tag"
+\\tag*{$1}$0
+endsnippet
+
+snippet p "Paragraph" i
+<p>$1</p>$0
+endsnippet
+
+snippet br "Break" i
+<br>
+endsnippet
